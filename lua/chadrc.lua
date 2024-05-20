@@ -5,17 +5,17 @@
 local M = {}
 
 M.ui = {
-	theme = "bearded-arc", -- default theme
-	theme_toggle = { "bearded-arc", "gruvbox_light" },
-  transparency = true,
+  theme = "bearded-arc", -- default theme
+  theme_toggle = { "bearded-arc", "gruvbox_light" },
+  transparency = false,
 
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
-	nvdash = {
-		load_on_startup = true,
-	},
+  -- hl_override = {
+  -- 	Comment = { italic = true },
+  -- 	["@comment"] = { italic = true },
+  -- },
+  nvdash = {
+    load_on_startup = true,
+  },
 }
 
 return M
