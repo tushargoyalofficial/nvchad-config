@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    -- event = "BufWritePre", -- uncomment for format on save
+    event = "BufWritePre", -- uncomment for format on save
     config = function()
       require "configs.conform"
     end,
@@ -27,7 +27,6 @@ return {
         "css-lsp",
         "dockerfile-language-server",
         "eslint-lsp",
-        "graphql-language-service-cli",
         "html-lsp",
         "json-lsp",
         "prisma-language-server",
@@ -45,12 +44,25 @@ return {
         "shfmt",
         "shellcheck",
         "bash-language-server",
-
-        -- c/cpp stuff
-        "clangd",
-        "clang-format",
       },
     },
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    filetypes = {
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "html",
+      "svelte",
+      "vue",
+      "markdown",
+    },
+    event = "InsertEnter",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
   },
   {
     "nvim-treesitter/nvim-treesitter",
@@ -61,7 +73,6 @@ return {
         "dart",
         "dockerfile",
         "html",
-        "graphql",
         "javascript",
         "json",
         "lua",
@@ -75,6 +86,22 @@ return {
         "typescript",
         "vim",
         "yaml",
+      },
+      autotag = {
+        enable = true,
+        enable_rename = true,
+        enable_close = true,
+        enable_close_on_slash = true,
+        filetypes = {
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact",
+          "html",
+          "svelte",
+          "vue",
+          "markdown",
+        },
       },
     },
   },

@@ -5,13 +5,10 @@ local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
 local servers = {
-  "astro",
   "cssls",
-  "clangd",
   "dartls",
   "dockerls",
   "eslint",
-  "graphql",
   "html",
   "jsonls",
   "prismals",
